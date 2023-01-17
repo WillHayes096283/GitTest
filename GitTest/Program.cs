@@ -13,8 +13,20 @@ namespace GitTest
             int usrInput = 0;
             int count = 1;
 
+            int x = 0;
+            int y = 0;
+
+            Console.WriteLine("Please enter the range of numbers to guess.");
+            Console.WriteLine("");
+
+            Console.Write("Please enter the starting number: ");
+            x = Convert.ToInt32(Console.ReadLine);
+
+            Console.Write("Please enter the ending number: ");
+            y = Convert.ToInt32(Console.ReadLine);
+
             Random r = new Random();
-            int ran = r.Next(0, 100);
+            int ran = r.Next(x, y);
 
             do
             {
@@ -29,7 +41,7 @@ namespace GitTest
                 }
                 else
                 {
-                    Console.WriteLine("Little Higher");
+                    Console.WriteLine("Little Higher...");
                     count++;
                 }
             } while (usrInput != ran);
