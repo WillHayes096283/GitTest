@@ -20,17 +20,17 @@ namespace GitTest
             Console.WriteLine("");
 
             Console.Write("Please enter the starting number: ");
-            x = Convert.ToInt32(Console.ReadLine);
+            x = Convert.ToInt32(Console.ReadLine());
 
             Console.Write("Please enter the ending number: ");
-            y = Convert.ToInt32(Console.ReadLine);
+            y = Convert.ToInt32(Console.ReadLine());
 
             Random r = new Random();
             int ran = r.Next(x, y);
 
             do
             {
-                Console.Write("Please guess an integer between 0 and 100: ");
+                Console.Write("Please guess an integer between " + x + " and " + y + ": ");
 
                 usrInput = Convert.ToInt32(Console.ReadLine());
 
